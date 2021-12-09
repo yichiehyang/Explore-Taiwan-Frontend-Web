@@ -12,19 +12,22 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HRT86MXMX"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-7HRT86MXMX');
+        gtag('config', 'G-7HRT86MXMX');
     </script>
-    
+
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MN3FLHJ');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MN3FLHJ');</script>
     <!-- End Google Tag Manager -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,8 +40,8 @@
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MN3FLHJ"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MN3FLHJ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <a class="skip" href='#intro'>Skip to Main Content</a>
     <header>
@@ -46,10 +49,13 @@
         <nav>
             <ul class="nav_links">
                 <li><a href="https://irene970617.github.io/project-tablet/" class="nav_item">Home</a></li>
-                <li><a href="https://irene970617.github.io/project-tablet/sightseeing.html"class="nav_item">Sightseeing</a></li>
+                <li><a href="https://irene970617.github.io/project-tablet/sightseeing.html"
+                        class="nav_item">Sightseeing</a></li>
                 <li><a href="https://irene970617.github.io/project-tablet/login.html" class="nav_item">Login</a></li>
-                <li><a href="https://irene970617.github.io/project-tablet/register.html" class="nav_item">Register</a></li>
-                <li><a href="https://irene970617.github.io/project-tablet/contact.html" id='current' class='nav_item'>Contact</a></li>
+                <li><a href="https://irene970617.github.io/project-tablet/register.html" class="nav_item">Register</a>
+                </li>
+                <li><a href="https://irene970617.github.io/project-tablet/contact.html" id='current'
+                        class='nav_item'>Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -60,25 +66,27 @@
 
         <div class="contact-card">
             <img src="img/introduction.jpg" alt="pretty picture">
-            <div class="contact-container-card">
-                <h2 class='contact-card-item'>Fill in the Form</h2>
-                <div class='contact-card-item'>
-                    <label for='fullname'>Fullname:</label>
-                    <input type="text" id='fullname' name='fullname'">
-            </div>
-            <div class='contact-card-item'>
-                <label for="email">Email: &emsp; &ensp;</label>
-                    <input type="email" id='email' name='email' ">
-              </div>
-          <div class='contact-card-item'>
-            <label for="message">Message</label><br>
-                    <textarea id='message' name='message' rows="4" cols="30"></textarea>
-                </div>
-                <div class='contact-card-item'>
-                    <button type='button'>Submit</button>
-                </div>
+            <form action="https://formspree.io/f/mayvyqrz" method="POST">
+                <div class="contact-container-card">
+                    <h2 class='contact-card-item'>Fill in the Form</h2>
+                    <div class='contact-card-item'>
+                        <label for='fullname'>Fullname:</label>
+                        <input type="text" id='fullname' name='fullname'">
+                    </div>
+                    <div class='contact-card-item'>
+                        <label for=" email">Email: &emsp; &ensp;</label>
+                        <input type="email" id='email' name='email' ">
+                    </div>
+                    <div class='contact-card-item'>
+                        <label for=" message">Message</label><br>
+                        <textarea id='message' name='message' rows="4" cols="30"></textarea>
+                    </div>
+                    <div class='contact-card-item'>
+                        <button type='button'>Submit</button>
+                    </div>
 
-            </div>
+                </div>
+            </form>
         </div>
 
 
