@@ -78,23 +78,7 @@ a.skip:focus{
 } 
 
 
-@media screen and (prefers-reduced-motion: reduce){
-  /*Turn off scroll*/
-  html{
-      scroll-behavior: auto; /* Removes scroll animation */
-  }
 
-  /*Turn off transition*/
-  .skip a{
-    -webkit-transition: initial; /* sets to default setting */
-    transition: initial; /* sets to default setting */
-  }
-
-  #logo{
-      animation: none;
-    }
-
-}
 
 /******** footer *********/
 footer{
@@ -420,7 +404,7 @@ button:hover{
 .contact-card{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   width:80%;
-  margin: 30px auto;
+  margin:30px auto;
   
 }
 .contact-container-card {
@@ -435,12 +419,40 @@ button:hover{
   padding:5px;
   text-align: center;
 }
+/*
 @media screen and (min-width: 425px){
   .nav_links a{
     font-size:1.1em;
   }
 }
+*/
+/**** reduce motion ****/
+@media screen and (prefers-reduced-motion: reduce){
+  /*Turn off scroll*/
+  html{
+      scroll-behavior:auto /* Removes scroll animation */
+  }
 
+  /*Turn off transition*/
+  .skip a{
+    -webkit-transition: initial; /* sets to default setting */
+    transition: initial; /* sets to default setting */
+  }
+
+  #introduction{
+    background-image:scroll;  /* Parallax effect */
+  }
+
+  #logo{
+      animation: none;
+    }
+
+  .flip-card:hover .flip-card-inner , .flip-card:active .flip-card-inner, .flip-card:focus .flip-card-inner,.flip-card:focus-within .flip-card-inner
+  {
+        transform: none;
+    }
+
+}
 
 
 /******** Tablet********/
@@ -450,6 +462,10 @@ button:hover{
     header {
       flex-direction: row;
       justify-content: space-between;
+    }
+    .nav_links a{
+      margin: 4px;
+      font-size:1.3em;
     }
     /****** homepage *******/
     .title{
@@ -461,9 +477,12 @@ button:hover{
     }
     #intro h1{
       font-size: 2.5em;
-  }
+    }
+    #intro p{
+      font-size: 1.2em;
+    }
     .container-grid{
-      grid-template-columns:  1fr 1fr 1fr 1fr;
+      grid-template-columns:  25% 25% 25% 25%;
       grid-template-rows:  200px 200px 200px 200px 200px 200px 200px;
       padding: 0 15%;
     }
@@ -516,6 +535,9 @@ button:hover{
     height: 430px; 
     background-image: url("../img/landscape.jpg");
   }
+  .titles p {
+    font-size:1.3em;
+  }
 
   .card-grid-container{
     /*padding: 0 12%;*/
@@ -525,43 +547,7 @@ button:hover{
     grid-gap: 5px;
     margin: 20px;
   }
-  .card-1{
-    grid-column:1/2;
-    grid-row:1/2;
-  }
-  .card-2{
-    grid-column: 2/3;
-    grid-row:1/2;
-  }
-  .card-3{
-    grid-column: 1/2;
-    grid-row:2/3;
-  }
-  .card-4{
-    grid-column: 2/3;
-    grid-row:2/3;
-  }
-  .card-5{
-    grid-column:1/2;
-    grid-row: 3/4;
-  }
-  .card-6{
-    grid-column: 2/3;
-    grid-row:3/4;
-  }
-  .card-7{
-    grid-column: 1/2;
-    grid-row:4/5;
-  }
-  .card-8{
-    grid-column: 2/3;
-    grid-row:4/5;
-  }
-  .card-9{
-    grid-column: 1/2;
-    grid-row:5/6;
-  }
-
+  
 
 
   /******** login and register*******/
@@ -610,8 +596,7 @@ button:hover{
   }
   .contact-card{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    width:30%;
-    margin: 30px auto;
+    width:50%;
     
   }
   .contact-container-card {
@@ -623,10 +608,74 @@ button:hover{
     text-align: center;
   }
 }
-/*
-@media screen and (min-width: 1000px){
+
+/***** The Largest Size ****/
+@media screen and (min-width: 1200px){
+  
+  /**** nav and header****/
+  .nav_links a{
+    margin: 4px;
+    font-size:1.5em;
+  }
+
+  /**** Homepage ****/
+  #intro p{
+    font-size: 1.5em;
+  }
+
+  /***** sightseeing page ****/
+  #intro h1{
+    font-size: 3em;
+  }
+  .titles p {
+    font-size:1.5em;
+  }
   .card-grid-container{
-    padding: 0 2em;
+    /*padding: 0 12%;*/
+    display: grid;
+    grid-template-columns:  auto auto auto;
+    grid-template-rows:  auto auto auto;
+    grid-gap: 5px;
+    margin: 20px;
+  }
+
+  /******** login and register*******/
+  .login-intro{
+      font-size: 3em;
+  }
+  /***** contact form page *****/
+  .contact-page{
+    font-size: 3em;
+  }
+  .contact-card{
+    width:40%;
+    
   }
 }
-*/
+
+@media screen and (max-width: 400px){
+  .nav_links{
+    padding:4px
+}
+.nav_links a{
+    padding: 4px 6px;
+    margin: 2px;
+    font-size:0.7em;
+  }
+  
+  
+  /***login ***/
+
+  .login-container{
+
+    padding: 0 3%;
+    grid-gap: 5px;
+  }
+
+  /*** contact ***/
+  .contact-card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width:100%;
+    margin:30px 0;
+  }
+}
