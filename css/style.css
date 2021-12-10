@@ -434,6 +434,9 @@ button:hover{
   }
 
   /*Turn off transition*/
+  a.skip:focus{
+    top:-50px;
+  }
   .skip a{
     -webkit-transition: initial; /* sets to default setting */
     transition: initial; /* sets to default setting */
